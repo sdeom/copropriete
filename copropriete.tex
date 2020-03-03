@@ -1,21 +1,56 @@
 \documentclass[10pt,a4paper,twoside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[french]{babel}
 \usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage{chemist}
+\usepackage{enumitem}
+% à passer en dernier
+\usepackage[french]{babel}
+\usepackage{hyperref}
 
 \author{Agnes Lebatteux}
-\title{Coproprité}
+\title{Copropriété}
 \date{2010}
+
+\newcommand*{\siecle}[1]{\textsc{#1}\ieme{}~siècle}
+\newcommand*{\nom}[1]{\textsc{#1}}
+\newcommand*{\pourcent}[1]{\nombre{#1}~\%}
+\newcommand*{\montant}[1]{\nombre{#1}~\euro}
+\newcommand*{\metreCarre}{m\up{2}}
+\newcommand*{\prixSurface}[1]{\montant{#1}/m\up{2}} 
+\newcommand*{\dioxydeDeCarbone}{\chemform{CO_2}}
+\newcommand*{\I}{\textsc{i}}
+\newcommand*{\II}{\textsc{ii}}
 
 \begin{document}
 	\maketitle
 	
-	\include{00_intro}
+	\part*{Préambule}
+	
+		« Un propriétaire, un bien ne sont jamais isolés ; toute
+		propriété se heurte à d’autres propriétés, à d’autres libertés
+		qui la limitent inévitablement" (C. Atias).
+	
+		\include{00_intro}
 	
 	\part{Le statut de la copropriété}
 	
 		\include{01_historique}
+		\include{02_immeublesRegis}
+		\include{03_syndicatCoproprietaires}
+		\include{04_partiesCommunesEtPrivatives}
+		\include{05_cessionLot}
+		\include{06_locationLot}
+		\include{07_usageDuLot}
+		\include{08_reglementCopropriete}
+		\include{09_etatDescriptifDivision}
+		\include{10_chargesDefinition}
+		\include{11_chargesModification}
+		\include{12_comptabiliteSyndicat}
+		\include{13_appelsDeFonds}
+		\include{14_mesuresConservatoires}
+		\include{15_recouvrement}
 	
 	\part{Deuxième partie}
 	
