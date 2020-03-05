@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage{lmodern} % Police un peu plus jolie
 \usepackage{eurosym}
 \usepackage{chemist}
 \usepackage{enumitem}
@@ -9,9 +10,22 @@
 \usepackage[french]{babel}
 \usepackage{hyperref}
 
-\author{Agnes Lebatteux}
+\author{Agnès \nom{Lebatteux}}
 \title{Copropriété}
 \date{2010}
+
+\hypersetup{%
+	pdfinfo={%
+		Title={\@title}%
+		%, Subject={}%
+		%, Author={Samuel \nom{Déom}}%
+		, Keywords={Copropriété, Master}%
+	}%
+	, colorlinks = true% colore, plutot qu'encadre, les liens hypertexte
+	, linkcolor = black% colore les liens internes en noir
+	, urlcolor = black% colore les liens externes en noir
+	, breaklinks = true% autorise les liens à être étendus sur plusieurs lignes
+}
 
 \newcommand*{\siecle}[1]{\textsc{#1}\ieme{}~siècle}
 \newcommand*{\nom}[1]{\textsc{#1}}
@@ -22,6 +36,11 @@
 \newcommand*{\dioxydeDeCarbone}{\chemform{CO_2}}
 \newcommand*{\I}{\textsc{i}}
 \newcommand*{\II}{\textsc{ii}}
+\newcommand*{\III}{\textsc{iii}}
+\newcommand*{\IV}{\textsc{iv}}
+\newcommand*{\V}{\textsc{v}}
+\newcommand*{\VI}{\textsc{vi}}
+\newcommand{\CCH}{Code de la construction et de l'habitation}
 
 \begin{document}
 	\maketitle
