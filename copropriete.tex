@@ -6,9 +6,14 @@
 \usepackage{eurosym}
 \usepackage{chemist}
 \usepackage{enumitem}
+\usepackage{moredefs}\usepackage[mla]{lips}
+\usepackage{makeidx}
 % à passer en dernier
-\usepackage[french]{babel}
+\usepackage[french]{babel, varioref}
 \usepackage{hyperref}
+
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
 
 \author{Agnès \nom{Lebatteux}}
 \title{Copropriété}
@@ -32,7 +37,8 @@
 \newcommand*{\pourcent}[1]{\nombre{#1}~\%}
 \newcommand*{\montant}[1]{\nombre{#1}~\euro}
 \newcommand*{\metreCarre}{m\up{2}}
-\newcommand*{\prixSurface}[1]{\montant{#1}/m\up{2}} 
+\newcommand*{\surface}[1]{\nombre{#1}~\metreCarre}
+\newcommand*{\prixSurface}[1]{\montant{#1}/\metreCarre} 
 \newcommand*{\dioxydeDeCarbone}{\chemform{CO_2}}
 \newcommand*{\I}{\textsc{i}}
 \newcommand*{\II}{\textsc{ii}}
@@ -40,10 +46,23 @@
 \newcommand*{\IV}{\textsc{iv}}
 \newcommand*{\V}{\textsc{v}}
 \newcommand*{\VI}{\textsc{vi}}
-\newcommand{\CCH}{Code de la construction et de l'habitation}
+\newcommand*{\CCH}{Code de la construction et de l'habitation}
+\newcommand*{\article}[2]{article~\articleCodifie{#1}{#2}}
+\newcommand*{\articleCodifie}[2]{#1.~#2}
+\newcommand*{\VEFA}{\textsc{vefa}}
+
+\newcommand*{\lrar}{lettre recommandée avec accusé de réception}
+
+\newcommand*{\etc}{\emph{etc.}}
+
+\newenvironment*{exemple}{\itshape}{}
+
+\makeindex
 
 \begin{document}
 	\maketitle
+	
+	\frontmatter
 	
 	\part*{Préambule}
 	
@@ -53,26 +72,72 @@
 	
 		\include{00_intro}
 	
+	\mainmatter
+	
 	\part{Le statut de la copropriété}
 	
 		\include{01_historique}
 		\include{02_immeublesRegis}
 		\include{03_syndicatCoproprietaires}
 		\include{04_partiesCommunesEtPrivatives}
+		
+	\part{Les droits du copropriétaire}
+	
+		Le copropriétaire est avant tout titulaire d'un droit réel sur son lot. Ce droit lui confère une maîtrise plus
+		ou moins complète des éléments matériels tant privatifs que communs composant le lot.
+		
+		C'est en tant que bénéficiaire des prérogatives attachées à son droit réel que la situation du copropriétaire
+		sera examinée ici.
+		\bigskip
+		
+		Les droits individuels des copropriétaires sont calqués sur les droits du propriétaire d’un bien immobilier :
+		\begin{description}
+			\item[abusus] droit de disposer
+			\item[fructus] droit de louer
+			\item[usus] droit d’usage
+		\end{description}
+		\bigskip
+		
+		Tous ces droits et prérogatives se trouvent enserrés dans des règles, souvent restrictives tendant à la
+		sauvegarde :
+		\begin{itemize}
+			\item  des droits de la collectivité que constitue le syndicat.
+			\item  des droits de l’acquéreur ou du locataire
+			\item  des droits de la collectivité publique
+		\end{itemize}
+		Ces droits s’exercent différemment sur les parties communes et sur les parties privatives
+	
 		\include{05_cessionLot}
 		\include{06_locationLot}
 		\include{07_usageDuLot}
+		
+	\part{Les actes}
+		
 		\include{08_reglementCopropriete}
 		\include{09_etatDescriptifDivision}
+		
+	\part{Les charges de copropriété}
+		
 		\include{10_chargesDefinition}
 		\include{11_chargesModification}
+		
+	\part{Les règles financières}
+		
 		\include{12_comptabiliteSyndicat}
 		\include{13_appelsDeFonds}
 		\include{14_mesuresConservatoires}
 		\include{15_recouvrement}
 	
 	\part{Deuxième partie}
+		
+		\include{21_travaux}
+	
+	\appendix
+	
+	\backmatter
 	
 	\tableofcontents
+	
+	\printindex
 	
 \end{document}
